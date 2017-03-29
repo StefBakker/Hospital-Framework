@@ -20,4 +20,16 @@ function create()
     		echo "Created succesful";
 	}
 }
+
+function edit()
+{
+	render("patient/edit");	
+	
+	
+}
+
+function editSave()
+{
+	
+} 
 ?>

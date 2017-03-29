@@ -1,5 +1,5 @@
 <?php
-
+// Get all the Patients and push it in an array
  function GetAllPatients(){
 	$db = openDatabaseConnection();
 

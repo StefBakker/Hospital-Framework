@@ -1,5 +1,10 @@
 *{
 	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+body{
+	background-color: lightgrey;
 }
 .header {
 	background-color: white;
@@ -7,6 +12,8 @@
 	margin-top: 150px;
 	width: 0 auto;
 	font-size: 19px;
+	width: 50% !important;
+	height: 550px;
 }
 
 table {
@@ -18,8 +25,6 @@ table, td, th {
 	border-collapse : collapse;
 	background-color: #EDF0F5;
 	color : black;
-	margin-left: 29%;
-	margin-right: 20%;
 }
 
 td, th {
@@ -30,8 +35,31 @@ td, th {
 .footerbar{
 	font-size: 23px;
 	text-align: 0 auto
+	border-style: solid;
+	color: white;
+}
+h1{
+	color: white;
+	margin-top: 80px;
 }
 
 h2{
 	font-size: 20px;
-0
+}
+
+label{
+	display: inline-block;
+	width: 100px;
+}
+
+form div {
+	margin: 5px 0;
+}
+
+div.card {
+    width: 0 auto;
+    width: 50% !important;
+    background-color: darkgrey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
