@@ -1,0 +1,37 @@
+*{
+	text-align: center;
+}
+.header {
+	background-color: white;
+	text-align: center;
+	margin-top: 150px;
+	width: 0 auto;
+	font-size: 19px;
+}
+
+table {
+	width : 700px;
+}
+
+table, td, th {
+	border : 1px #ddd solid;
+	border-collapse : collapse;
+	background-color: #EDF0F5;
+	color : black;
+	margin-left: 29%;
+	margin-right: 20%;
+}
+
+td, th {
+	padding: 2px;
+	text-align: center;
+}
+
+.footerbar{
+	font-size: 23px;
+	text-align: 0 auto
+}
+
+h2{
+	font-size: 20px;
+0
