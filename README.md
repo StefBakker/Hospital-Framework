@@ -1,1 +1,1 @@
-Vergeet niet de config.php voor gebruik aan te passen aan jou wamp omgeving.
+This is my Hospital Website build in the Da-Vinci 
