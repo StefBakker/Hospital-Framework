@@ -12,12 +12,12 @@ body{
 	margin-top: 150px;
 	width: 0 auto;
 	font-size: 19px;
-	width: 50% !important;
+	width: 55% !important;
 	height: 550px;
 }
 
 table {
-	width : 700px;
+	width : 750px;
 }
 
 table, td, th {
@@ -58,8 +58,12 @@ form div {
 
 div.card {
     width: 0 auto;
-    width: 50% !important;
+    width: 55% !important;
     background-color: darkgrey;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
+}
+
+textarea{
+	resize: none;
 }

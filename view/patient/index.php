@@ -12,7 +12,7 @@
 						<th>Name</th>
 						<th>Species</th>
 						<th>Status</th>
-						<th></th>
+						<th>Birthdate</th>
 						<th></th>
 					</tr>
 			<!-- Makes array printable -->
@@ -23,8 +23,9 @@
 							<td><?=$patient['name']?></td>
 							<td><?=$patient['species']?></td>
 							<td><?=$patient['status']?></td>
-							<td class="center"><a href="edit">edit</a></td>
-							<td class="center"><a href="#">delete</a></td>
+							<td><?=$patient['birthdate']?></td>
+							<td class="center"><a href="edit/?id=<?= $patient['id'] ?>">edit</a></td>
+							<td class="center"><a href="delete/?id=<?= $patient['id'] ?>">delete</a></td>
 						</tr>
 			<?php
 				endforeach;
