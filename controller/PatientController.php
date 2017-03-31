@@ -43,4 +43,21 @@ function edit()
 	$patient = getPatient($id);
 	render('patient/edit', array("patient" => $patient));
 }
+
+function delete()
+{
+    // If id exist in url then make $id
+    if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+        $patient = getPatient($id);
+    }
+  	if (isset($_POST['confirmed'])){
+  		deletePatient($id);
+   	}
+
+  	elseif (isset($_POST['canceled'])) {
+  		    header("Location:" . URL . "patient/index");
+  	}
+	render('patient/delete', array('patient' => $patient));
+}
 ?>

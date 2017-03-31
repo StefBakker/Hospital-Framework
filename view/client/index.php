@@ -1,6 +1,6 @@
 <div>
 	<div class="header">
-		<div class="card"><h1>Patiënts</h1></div>
+		<div class="card"><h1>Cliënts</h1></div>
 		<br>
 		<br>
 		<br>
@@ -10,22 +10,22 @@
 				<table>
 					<tr>
 						<th>Name</th>
-						<th>Species</th>
-						<th>Status</th>
-						<th>Birthdate</th>
+						<th>Last Name</th>
+						<th>Patient</th>
+						<th>Telephone</th>
 						<th></th>
 					</tr>
 			<!-- Makes array printable -->
 				<?php
-					foreach($patients as $patient):
+					foreach($clients as $client):
 				?>
 						<tr>
-							<td><?=$patient['name']?></td>
-							<td><?=$patient['species']?></td>
-							<td><?=$patient['status']?></td>
-							<td><?=$patient['birthdate']?></td>
-							<td class="center"><a href="edit/?id=<?= $patient['id'] ?>">edit</a></td>
-							<td class="center"><a href="delete/?id=<?= $patient['id'] ?>">delete</a></td>
+							<td><?=$client['name']?></td>
+							<td><?=$client['last_name']?></td>
+							<td><?=$client['patient']?></td>
+							<td><?=$client['telephone']?></td>
+							<td class="center"><a href="edit/?id=<?= $client['id'] ?>">edit</a></td>
+							<td class="center"><a href="delete/<?= $client['id'] ?>">delete</a></td>
 						</tr>
 			<?php
 				endforeach;

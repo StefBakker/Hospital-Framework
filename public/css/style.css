@@ -59,11 +59,18 @@ form div {
 div.card {
     width: 0 auto;
     width: 55% !important;
-    background-color: darkgrey;
+    background-color: #5DADE2;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
 }
 
 textarea{
 	resize: none;
+}
+
+.button1 {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-decoration: none;
+    background-color: #5DADE2;
+    color: white;
 }

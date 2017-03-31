@@ -63,24 +63,23 @@ function editPatient($name, $species, $status, $birthdate, $id) {
         ));
     // Makes $db empty
     $db = null;
+    // Goes back to home when done
     header("Location:" . URL . "patient/index");
 }
 
 
-function delete($id)
+function deletePatient($id)
 {
     $db = openDatabaseConnection();
     
-    $patient = getPatient($id);
+    // Deletes patient from database
+    $sql = "DELETE FROM patient WHERE id=:id ";
+    $query = $db->prepare($sql);
+    $query->execute(array(
+        ':id' => $id
+        ));
+    $db = null;
+    header("Location:" . URL . "patient/index");
 
-    //load in delete.php
-    render("patient/delete", array ('patient' => $patient));
-    
-
-    if (!deleteStudent($id)) {
-        header("Location:" . URL . "error/index");
-        exit();
-    }
-
-    header("Location:" . URL . "student/index");
 }
+?>
