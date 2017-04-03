@@ -1,6 +1,8 @@
 <?php
-
+// Says that is needs the Clientmodel of the page.
 require(ROOT . "model/ClientModel.php");
+
+// Says that is needs the 
 require(ROOT . "model/PatientModel.php");
 
 function index()
@@ -43,7 +45,8 @@ function edit()
 		$telephone = $_POST['telephone'];
 		editClient($name, $last_name, $patient, $telephone, $id);
 	}
-	render('client/edit', array("client" => $client));
+	render('client/edit', array("clients" => $client,
+		"patients" => GetAllPatients()));
 }
 
 function delete()
@@ -53,10 +56,11 @@ function delete()
         $id = $_GET['id'];
         $client = getClient($id);
     }
+    // If the submit button is confirmed then run function deleteclient
   	if (isset($_POST['confirmed'])){
   		deleteclient($id);
    	}
-
+   	// If the submit botton is canceled, go back to home
   	elseif (isset($_POST['canceled'])) {
   		    header("Location:" . URL . "client/index");
   	}

@@ -1,6 +1,11 @@
 <?php
+// Require SpecieModel for showing the specie in the index 
+require (ROOT . "model/SpecieModel.php");
 
+// Require PatientModel
 require(ROOT . "model/PatientModel.php");
+
+
 
 function index()
 {
@@ -41,7 +46,10 @@ function edit()
 		editPatient($name, $species, $status, $birthdate, $id);
 	}
 	$patient = getPatient($id);
-	render('patient/edit', array("patient" => $patient));
+	$species = GetAllSpecies();
+	// render edit.php and give patient and specie with it
+	render('patient/edit', array("patient" => $patient),
+		array("species" => $species));
 }
 
 function delete()
@@ -51,10 +59,11 @@ function delete()
         $id = $_GET['id'];
         $patient = getPatient($id);
     }
+    // If the submit button is confirmed then run function deleteclient
   	if (isset($_POST['confirmed'])){
   		deletePatient($id);
    	}
-
+   	// If the submit botton is canceled, go back to home
   	elseif (isset($_POST['canceled'])) {
   		    header("Location:" . URL . "patient/index");
   	}

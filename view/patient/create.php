@@ -9,8 +9,17 @@
 			<input type="text" id="name" name="name">
 		</div>
 		<div>
-			<label for="name">Species:	</label>
-			<input type="text" id="species" name="species">
+			<label for="specie">Specie:		</label>	
+			<select name="specie">
+				<?php
+					foreach($species as $specie):
+					var_dump($specie);
+				?>
+					<option value="<?=$specie['name']?>"><?=$specie['name']?></option>
+				<?php
+					endforeach;
+				?>
+			</select>
 		</div>
 		<div>
 			<label for="name">Status:	</label>

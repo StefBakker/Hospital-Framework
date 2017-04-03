@@ -11,7 +11,15 @@
 		</div>
 		<div>
 			<label for="name">Species:</label>
-			<input type="text" id="species" name="species" value="<?= $info['species'] ?>">
+			<select name="species">
+			<!-- loop twice beacause we have a array in a array -->
+				<?php foreach ($species as $info):?>
+					<?php foreach ($info as $species):
+						var_dump($species);?>
+						<option value="<?= $specie['name']?>"><?= $specie['name']?></option>
+					<?php endforeach; ?>
+				<?php endforeach; ?>
+			</select>
 		</div>
 		<div>
 			<label for="name">Status:</label>
